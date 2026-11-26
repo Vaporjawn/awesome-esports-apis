@@ -1,0 +1,20 @@
+{
+  "name": "awesome-esports-apis",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Curated APIs, data sources, SDKs and guides for esports and competitive game data.",
+  "author": "Victor Williams <victor.williams.dev@gmail.com>",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vaporjawn/awesome-esports-apis.git"
+  },
+  "scripts": {
+    "lint": "awesome-lint README.md && markdownlint-cli2 README.md CONTRIBUTING.md",
+    "links": "python3 scripts/check_links.py"
+  },
+  "devDependencies": {
+    "awesome-lint": "^2.2.2",
+    "markdownlint-cli2": "^0.18.1"
+  }
+}
