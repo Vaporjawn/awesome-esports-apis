@@ -16,5 +16,27 @@
   "devDependencies": {
     "awesome-lint": "^2.2.2",
     "markdownlint-cli2": "^0.18.1"
+  },
+  "keywords": [
+    "esports",
+    "esports-api",
+    "game-api",
+    "game-stats",
+    "riot-games-api",
+    "league-of-legends",
+    "dota2",
+    "valorant",
+    "counter-strike",
+    "pandascore",
+    "liquipedia",
+    "opendota",
+    "twitch-api",
+    "discord-bot",
+    "awesome",
+    "awesome-list"
+  ],
+  "homepage": "https://github.com/Vaporjawn/awesome-esports-apis#readme",
+  "bugs": {
+    "url": "https://github.com/Vaporjawn/awesome-esports-apis/issues"
   }
 }
