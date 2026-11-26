@@ -35,9 +35,16 @@ const marked = new Marked({
       const text = this.parser.parseInline(tokens);
       return `<h${depth} id="${slugify(text)}">${text}</h${depth}>\n`;
     },
+    html({ text }) {
+      // Never pass raw HTML from the README through to the page.
+      return escapeHtml(text);
+    },
     link({ href, tokens }) {
       const text = this.parser.parseInline(tokens);
-      const external = /^https?:/.test(href);
+      if (!/^(https?:\/\/|#|mailto:)/i.test(href)) {
+        return text; // drop javascript:, data: and any other scheme
+      }
+      const external = /^https?:/i.test(href);
       const attrs = external ? ' rel="noopener" target="_blank"' : "";
       return `<a href="${escapeHtml(href)}"${attrs}>${text}</a>`;
     },
