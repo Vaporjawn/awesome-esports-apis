@@ -13,6 +13,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 WARN_CODES = {401, 403, 429}
+SELF_SITE = "https://vaporjawn.dev/awesome-esports-apis/"
 USER_AGENT = "Mozilla/5.0 (awesome-esports-apis link checker)"
 
 
@@ -28,7 +29,8 @@ def check(url):
         with urllib.request.urlopen(request, timeout=25) as response:
             return url, response.status, "ok"
     except urllib.error.HTTPError as error:
-        kind = "warn" if error.code in WARN_CODES else "dead"
+        own_site = url.startswith(SELF_SITE)  # new deploys may lag the README that links them
+        kind = "warn" if error.code in WARN_CODES or own_site else "dead"
         return url, error.code, kind
     except Exception as error:  # noqa: BLE001 - report any network failure
         return url, type(error).__name__, "dead"

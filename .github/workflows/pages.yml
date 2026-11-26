@@ -26,9 +26,8 @@ jobs:
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
-      - id: pages
-        uses: actions/configure-pages@v5
-      - run: node scripts/build-site.mjs "${{ steps.pages.outputs.base_url }}/"
+      - uses: actions/configure-pages@v5
+      - run: node scripts/build-site.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
