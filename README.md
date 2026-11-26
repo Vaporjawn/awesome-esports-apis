@@ -4,7 +4,7 @@
 
 Covers esports APIs and game stats APIs for League of Legends, Dota 2, Smite, Mobile Legends, VALORANT, Counter-Strike 2, Overwatch, Apex Legends, PUBG, Rocket League, fighting games and more: the Riot Games API, Steam Web API, Battle.net API, PandaScore, Liquipedia, OpenDota, STRATZ and Start.gg, plus Python, JavaScript, Go, Rust and C# SDKs, Discord and Twitch bot libraries, and open datasets.
 
-Every entry states its auth type and free or paid tier only where the provider's own documentation says so. When it does not, the entry says nothing rather than guess. Entries are ordered MOBA first (League of Legends, Dota 2, Smite, Mobile Legends), then FPS, fighting games and everything else. Last checked: 2026-11-26. Link verification rules are in the contribution guidelines below.
+Browse and search this list on the [website](https://vaporjawn.dev/awesome-esports-apis/). Every entry states its auth type and free or paid tier only where the provider's own documentation says so. When it does not, the entry says nothing rather than guess. Entries are ordered MOBA first (League of Legends, Dota 2, Smite, Mobile Legends), then FPS, fighting games and everything else. Last checked: 2026-11-26. Link verification rules are in the contribution guidelines below.
 
 ## Contents
 
